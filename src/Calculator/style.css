@@ -15,10 +15,14 @@
   padding: 36px 0px;
 }
 
+.Calculator .result span {
+  padding-right: 6px;
+}
+
 input {
   margin: 0 .3rem;
   height: 1em;
-  padding: .275rem .75rem;
+  padding: .275rem .35rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;

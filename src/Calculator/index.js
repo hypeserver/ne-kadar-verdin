@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NumberFormat from 'react-number-format';
 import { brackets, calculate } from './util';
 import './style.css';
 class Calculator extends Component {
@@ -10,11 +11,11 @@ class Calculator extends Component {
     };
   }
 
-  handleChange = (year, event) => {
+  handleChange = (year, values) => {
     this.setState({
       wages: {
         ...this.state.wages,
-        [year]: event.target.value
+        [year]: values.floatValue,
       }
     }, () => {
       this.setState({
@@ -33,19 +34,25 @@ class Calculator extends Component {
               <div className="wage" key={year}>
                 <label>
                   {year}:
-                  <input
-                    type="number"
-                    onChange={(e) => this.handleChange(year, e)}
+                  <NumberFormat
+                    thousandSeparator={true}
+                    prefix={'₺'}
+                    onValueChange={(values) => this.handleChange(year, values)}
                     value={this.state.wages[year] || ""}
                   />
-                  ₺
                 </label>
               </div>
             ))}
           </div>
         </div>
         <div className="result">
-          Bu zamana kadar verdiginiz vergilerin toplami: ₺{this.state.result}
+          <span>Bu zamana kadar verdiginiz vergilerin toplami:</span>
+          <NumberFormat
+            displayType={'text'}
+            thousandSeparator={true}
+            prefix={'₺'}
+            value={this.state.result}
+          />
         </div>
       </div>
     );
