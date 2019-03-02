@@ -66,7 +66,7 @@ export const calculate = (wages) => {
     let amount = wage;
     let total_tax = 0;
     let tax;
-    for (var key in bracket) {
+    Object.keys(bracket).forEach(key => {
       if (amount > 0) {
         const ratio = bracket[key];
         if (key !== "last" && amount > key) {
@@ -78,16 +78,16 @@ export const calculate = (wages) => {
         amount -= key;
         total_tax += tax;
       }
-    }
+    });
     return total_tax;
   }
   
   function calculate_total_taxes(brackets, wages) {
     let total = 0;
-    for (var year in wages) {
+    Object.keys(wages).forEach(year => {
       const yearly_tax = calculate_yearly_tax(brackets[year], wages[year]);
       total += yearly_tax;
-    }
+    });
     return total;
   }
 
