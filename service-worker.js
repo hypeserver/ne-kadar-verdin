@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ne-kadar-verdin/precache-manifest.32f82bf5d8cc090e049bbcaf3a76119f.js"
+  "/ne-kadar-verdin/precache-manifest.7f617ca4c8bd1dea9b18868c2778c479.js"
 );
 
 workbox.clientsClaim();
