@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Calculator from './Calculator';
-import './App.css';
+import React, { Component } from "react";
+import Calculator from "./Calculator";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -13,7 +13,15 @@ class App extends Component {
           <Calculator />
         </div>
         <footer>
-          <a href="https://github.com/hypeserver/ne-kadar-verdin" target="_blank">Ne kadar verdin?</a> GitHub uzerinde barindirilan acik kaynakli bir projedir. Bilgilerinizin asla kaydedilmedigini kodu okuyarak gorebilirsiniz.
+          <a
+            href="https://github.com/hypeserver/ne-kadar-verdin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ne kadar verdin?
+          </a>{" "}
+          GitHub uzerinde barindirilan acik kaynakli bir projedir.
+          Bilgilerinizin asla kaydedilmedigini kodu okuyarak gorebilirsiniz.
         </footer>
       </div>
     );
