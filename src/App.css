@@ -8,6 +8,12 @@ body {
   background-size: contain;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: 100% 100%;
+  }
+}
+
 a {
   color: darkred;
   font-weight: bold;
