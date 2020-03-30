@@ -70,16 +70,18 @@ class Calculator extends Component {
             <NumberFormat
               displayType={"text"}
               thousandSeparator={true}
-              prefix={"₺"}
-              value={this.state.result}
-            />
-            <NumberFormat
-              displayType={"text"}
-              thousandSeparator={true}
               prefix={"$"}
               value={this.state.resultUSD}
             />
           </span>
+          (
+          <NumberFormat
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"₺"}
+            value={this.state.result}
+          />
+          )
         </div>
       </div>
     );
