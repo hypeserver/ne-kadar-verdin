@@ -1,5 +1,5 @@
 .Calculator .data {
-  padding: 36px 0px;
+  padding: 36px 0px 0px;
 }
 
 .Calculator .data p {
@@ -41,5 +41,5 @@ input:focus {
 
 .price {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 36px;
 }

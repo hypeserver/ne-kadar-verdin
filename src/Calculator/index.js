@@ -65,7 +65,7 @@ class Calculator extends Component {
           </div>
         </div>
         <div className="result">
-          <span>Bugüne kadar verdiğiniz vergilerin toplamı:</span>
+          <div>Bugüne kadar verdiğiniz vergilerin toplamı:</div>
           <span className="price">
             <NumberFormat
               displayType={"text"}
