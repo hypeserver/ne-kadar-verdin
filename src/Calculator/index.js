@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import NumberFormat from "react-number-format";
-import { brackets, calculate } from "./util";
+import { brackets, calculate, yearly_usd } from "./util";
 import "./style.css";
+
 class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
       wages: {},
-      result: 0
+      result: 0,
+      resultUSD: 0
     };
   }
 
@@ -20,8 +22,20 @@ class Calculator extends Component {
         }
       },
       () => {
+        const resultUSD = Object.entries(this.state.wages).reduce(
+          (mem, [year, tax]) => {
+            mem += yearly_usd(year, tax);
+            // Object.keys(brackets).forEach(year => {
+            //   mem += yearly_usd(year, tax);
+            // });
+            // console.log(acc);
+            return mem;
+          },
+          0
+        );
         this.setState({
-          result: calculate(this.state.wages)
+          result: calculate(this.state.wages),
+          resultUSD: Math.floor(resultUSD)
         });
       }
     );
@@ -58,6 +72,12 @@ class Calculator extends Component {
               thousandSeparator={true}
               prefix={"₺"}
               value={this.state.result}
+            />
+            <NumberFormat
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              value={this.state.resultUSD}
             />
           </span>
         </div>
