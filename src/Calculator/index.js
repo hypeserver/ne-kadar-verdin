@@ -25,10 +25,6 @@ class Calculator extends Component {
         const resultUSD = Object.entries(this.state.wages).reduce(
           (mem, [year, tax]) => {
             mem += yearly_usd(year, tax);
-            // Object.keys(brackets).forEach(year => {
-            //   mem += yearly_usd(year, tax);
-            // });
-            // console.log(acc);
             return mem;
           },
           0
