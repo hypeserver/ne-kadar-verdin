@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ne-kadar-verdin/static/css/main.e8eaadee.chunk.css",
-    "main.js": "/ne-kadar-verdin/static/js/main.df355580.chunk.js",
-    "main.js.map": "/ne-kadar-verdin/static/js/main.df355580.chunk.js.map",
+    "main.css": "/ne-kadar-verdin/static/css/main.37443999.chunk.css",
+    "main.js": "/ne-kadar-verdin/static/js/main.2edf29f4.chunk.js",
+    "main.js.map": "/ne-kadar-verdin/static/js/main.2edf29f4.chunk.js.map",
     "runtime-main.js": "/ne-kadar-verdin/static/js/runtime-main.32a86496.js",
     "runtime-main.js.map": "/ne-kadar-verdin/static/js/runtime-main.32a86496.js.map",
     "static/js/2.2a738b12.chunk.js": "/ne-kadar-verdin/static/js/2.2a738b12.chunk.js",
     "static/js/2.2a738b12.chunk.js.map": "/ne-kadar-verdin/static/js/2.2a738b12.chunk.js.map",
     "index.html": "/ne-kadar-verdin/index.html",
-    "precache-manifest.589abf1823dc773d7fd26022b771b459.js": "/ne-kadar-verdin/precache-manifest.589abf1823dc773d7fd26022b771b459.js",
+    "precache-manifest.c38f9a9536240f06bf3aaa8f240fe50b.js": "/ne-kadar-verdin/precache-manifest.c38f9a9536240f06bf3aaa8f240fe50b.js",
     "service-worker.js": "/ne-kadar-verdin/service-worker.js",
-    "static/css/main.e8eaadee.chunk.css.map": "/ne-kadar-verdin/static/css/main.e8eaadee.chunk.css.map",
+    "static/css/main.37443999.chunk.css.map": "/ne-kadar-verdin/static/css/main.37443999.chunk.css.map",
     "static/js/2.2a738b12.chunk.js.LICENSE.txt": "/ne-kadar-verdin/static/js/2.2a738b12.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.32a86496.js",
     "static/js/2.2a738b12.chunk.js",
-    "static/css/main.e8eaadee.chunk.css",
-    "static/js/main.df355580.chunk.js"
+    "static/css/main.37443999.chunk.css",
+    "static/js/main.2edf29f4.chunk.js"
   ]
 }
