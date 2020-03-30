@@ -7,9 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-wrapper">
-          <header className="App-header">
-            <h1>Ne kadar verdin?</h1>
-          </header>
+          <header className="App-header" />
           <Calculator />
         </div>
         <footer>
@@ -20,8 +18,8 @@ class App extends Component {
           >
             Ne kadar verdin?
           </a>{" "}
-          GitHub uzerinde barindirilan acik kaynakli bir projedir.
-          Bilgilerinizin asla kaydedilmedigini kodu okuyarak gorebilirsiniz.
+          GitHub üzerinde barındırılan açık kaynaklı bir projedir.
+          Bilgilerinizin asla kaydedilmediğine emin olabilirsiniz.
         </footer>
       </div>
     );

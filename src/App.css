@@ -1,19 +1,20 @@
 body {
   font-synthesis: none;
-  -moz-font-feature-settings: "kern";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Helvetica Neue", Helvetica, sans-serif;
+  background: url("/ne-kadar-verdin/bg.png") center center no-repeat;
+  background-size: contain;
 }
 
 a {
-  color: darkblue;
+  color: darkred;
   font-weight: bold;
 }
 
 a:hover {
-  color: blue;
+  color: purple;
 }
 
 a:active,
@@ -33,21 +34,19 @@ h1 {
 }
 
 .App-header {
-  background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  height: 180px;
 }
 
 footer {
   text-align: center;
   font-size: 12px;
-  padding: 24px 10px;
+  padding: 12px 10px;
   color: #606060;
-  background: #eceef1;
 }
 
 .App-wrapper {
