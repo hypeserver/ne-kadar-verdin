@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactNumeric from "react-numeric";
+import domtoimage from "dom-to-image";
 import { brackets, calculate } from "./util";
 import "./style.css";
 
@@ -36,6 +37,35 @@ class Calculator extends Component {
     this.setState({
       stage: "data"
     });
+  };
+
+  handleShare = () => {
+    const wrapper = document.body;
+    const scale = 750 / wrapper.offsetWidth;
+    const remove1 = document.querySelector(".remove1");
+    const remove2 = document.querySelector(".remove2");
+    remove1.classList.add("hidden");
+    remove2.classList.add("hidden");
+    domtoimage
+      .toPng(wrapper, {
+        height: wrapper.offsetHeight * scale,
+        width: wrapper.offsetWidth * scale,
+        style: {
+          transform: "scale(" + scale + ")",
+          transformOrigin: "top left",
+          width: wrapper.offsetWidth + "px",
+          height: wrapper.offsetHeight + "px"
+        }
+      })
+      .then(dataUrl => {
+        const link = document.createElement("a");
+        link.download = `nekadarverdin.png`;
+        link.href = dataUrl;
+        link.click();
+
+        remove1.classList.remove("hidden");
+        remove2.classList.remove("hidden");
+      });
   };
 
   render() {
@@ -99,7 +129,13 @@ class Calculator extends Component {
             <div className="nekadarverdin" />
             <div className="hashtag" />
             <div>
-              <button className="secondary" onClick={this.handleShowData}>
+              <button className="secondary remove1" onClick={this.handleShare}>
+                GÖRÜNTÜ AL
+              </button>
+              <button
+                className="secondary remove2"
+                onClick={this.handleShowData}
+              >
                 TEKRAR DÜZENLE
               </button>
             </div>
