@@ -41,7 +41,13 @@ class Calculator extends Component {
 
   handleShare = () => {
     const wrapper = document.body;
-    const scale = 750 / wrapper.offsetWidth;
+    const vw = Math.max(
+      document.documentElement.clientWidth,
+      window.innerWidth || 0
+    );
+    const isDesktop = vw > 640;
+    const width = isDesktop ? 1280 : 750;
+    const scale = 1280 / wrapper.offsetWidth;
     const remove1 = document.querySelector(".remove1");
     const remove2 = document.querySelector(".remove2");
     remove1.classList.add("hidden");
