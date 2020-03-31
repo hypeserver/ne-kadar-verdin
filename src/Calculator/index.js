@@ -47,7 +47,7 @@ class Calculator extends Component {
     );
     const isDesktop = vw > 640;
     const width = isDesktop ? 1280 : 750;
-    const scale = 1280 / wrapper.offsetWidth;
+    const scale = width / wrapper.offsetWidth;
     const remove1 = document.querySelector(".remove1");
     const remove2 = document.querySelector(".remove2");
     remove1.classList.add("hidden");
