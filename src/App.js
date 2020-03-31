@@ -22,6 +22,8 @@ class App extends Component {
           </a>{" "}
           GitHub üzerinde barındırılan açık kaynaklı bir projedir.
           Bilgilerinizin asla kaydedilmediğine emin olabilirsiniz.
+          <br />
+          <i>Dolar değeri her yılın kur seviyesine göre hesaplanır.</i>
         </footer>
       </div>
     );

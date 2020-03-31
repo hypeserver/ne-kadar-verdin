@@ -95,7 +95,7 @@ footer {
 }
 
 .hashtag {
-  margin: 70px auto 0px;
+  margin: 30px auto;
   height: 62px;
   width: 300px;
   background: url("/ne-kadar-verdin/hashtag.png") no-repeat;
@@ -103,8 +103,8 @@ footer {
 }
 
 .nekadarverdin {
-  margin: 30px auto;
-  height: 62px;
+  margin: 70px auto 0px;
+  height: 36px;
   width: 300px;
   background: url("/ne-kadar-verdin/nekadarverdin.png") no-repeat;
   background-size: 100% 100%;

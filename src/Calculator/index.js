@@ -93,8 +93,8 @@ class Calculator extends Component {
               digitGroupSeparator="."
               value={this.state.result}
             />
-            <div className="hashtag" />
             <div className="nekadarverdin" />
+            <div className="hashtag" />
             <div>
               <button className="secondary" onClick={this.handleShowData}>
                 TEKRAR DÜZENLE
