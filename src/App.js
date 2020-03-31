@@ -23,6 +23,7 @@ class App extends Component {
           GitHub üzerinde barındırılan açık kaynaklı bir projedir.
           Bilgilerinizin asla kaydedilmediğine emin olabilirsiniz.
         </footer>
+        <div className="hashtag" />
       </div>
     );
   }

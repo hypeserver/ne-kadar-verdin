@@ -73,3 +73,13 @@ footer {
 .App-wrapper {
   flex: 1 1 auto;
 }
+
+.hashtag {
+  position: fixed;
+  height: 62px;
+  width: 300px;
+  background: url("/ne-kadar-verdin/hashtag.png") no-repeat;
+  background-size: 100% 100%;
+  bottom: 60px;
+  left: 180px;
+}
