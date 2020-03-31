@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ne-kadar-verdin/precache-manifest.c12a2496767f80b87be2cc19a28a50f5.js"
+  "/ne-kadar-verdin/precache-manifest.ff1905e291fcdfd49c82356355a0780d.js"
 );
 
 self.addEventListener('message', (event) => {
