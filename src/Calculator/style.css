@@ -8,6 +8,14 @@
 
 .Calculator .wages .wage {
   padding: 6px 0px;
+  border-bottom: 1px dashed #acacac;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.Calculator .wages .wage label {
+  color: #c80000;
+  font-weight: bold;
 }
 
 .Calculator .result {
@@ -53,4 +61,5 @@ input.input-numeric:focus {
   font-weight: bold;
   font-size: 36px;
   width: 240px;
+  color: #c80000;
 }
