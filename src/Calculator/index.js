@@ -8,84 +8,100 @@ class Calculator extends Component {
     super(props);
     this.state = {
       wages: {},
+      stage: "data",
       result: 0,
       resultUSD: 0
     };
   }
 
   handleChange = (year, value) => {
-    this.setState(
-      {
-        wages: {
-          ...this.state.wages,
-          [year]: value
-        }
-      },
-      () => {
-        const { result, resultUSD } = calculate(this.state.wages);
-        this.setState({
-          result,
-          resultUSD
-        });
+    this.setState({
+      wages: {
+        ...this.state.wages,
+        [year]: value
       }
-    );
+    });
+  };
+
+  handleShowResults = () => {
+    const { result, resultUSD } = calculate(this.state.wages);
+    this.setState({
+      result,
+      resultUSD,
+      stage: "result"
+    });
+  };
+
+  handleShowData = () => {
+    this.setState({
+      stage: "data"
+    });
   };
 
   render() {
     return (
       <div className="Calculator">
-        <div className="data">
-          <p>
-            4A detaylı hizmet dökümünüzdeki yıllık "Prime Esas Kazanç (P.E.K)" değerini
-            girmeniz yeterlidir.
-          </p>
-          <div className="wages">
-            {Object.keys(brackets)
-              .reverse()
-              .map(year => (
-                <div className="wage" key={year}>
-                  <label>
-                    {year}:
-                    <ReactNumeric
-                      className="input-numeric"
-                      value={this.state.wages[year] || ""}
-                      minimumValue="0"
-                      currencySymbol=" ₺"
-                      decimalCharacter=","
-                      digitGroupSeparator="."
-                      onChange={(event, value) =>
-                        this.handleChange(year, value)
-                      }
-                      onInvalidPaste={"ignore"}
-                    />
-                  </label>
-                </div>
-              ))}
+        {this.state.stage === "data" ? (
+          <div className="data">
+            <p>
+              4A detaylı hizmet dökümünüzdeki yıllık "Prime Esas Kazanç (P.E.K)"
+              değerini girmeniz yeterlidir.
+            </p>
+            <div className="wages">
+              {Object.keys(brackets)
+                .reverse()
+                .map(year => (
+                  <div className="wage" key={year}>
+                    <label>
+                      {year}:
+                      <ReactNumeric
+                        className="input-numeric"
+                        value={this.state.wages[year] || ""}
+                        minimumValue="0"
+                        currencySymbol=" ₺"
+                        decimalCharacter=","
+                        digitGroupSeparator="."
+                        onChange={(event, value) =>
+                          this.handleChange(year, value)
+                        }
+                        onInvalidPaste={"ignore"}
+                      />
+                    </label>
+                  </div>
+                ))}
+            </div>
+            <button onClick={this.handleShowResults}>HESAPLA</button>
           </div>
-        </div>
-        <div className="result">
-          <div>Bugüne kadar verdiğiniz vergilerin toplamı:</div>
-          <span className="price">
+        ) : (
+          <div className="result">
+            <div>Bugüne kadar verdiğim vergilerin toplamı:</div>
+            <div className="price">
+              <ReactNumeric
+                className="priceinput"
+                readOnly
+                currencySymbol=" $"
+                decimalCharacter=","
+                digitGroupSeparator="."
+                value={this.state.resultUSD}
+              />
+            </div>
             <ReactNumeric
-              className="priceinput"
               readOnly
-              currencySymbol=" $"
+              className="priceinput"
+              currencySymbol=" ₺"
               decimalCharacter=","
               digitGroupSeparator="."
-              value={this.state.resultUSD}
+              value={this.state.result}
             />
-          </span>
-          (
-          <ReactNumeric
-            readOnly
-            className="priceinput"
-            currencySymbol=" ₺"
-            decimalCharacter=","
-            digitGroupSeparator="."
-            value={this.state.result}
-          />
-          )
-        </div>
+            <div className="hashtag" />
+            <div className="nekadarverdin" />
+            <div>
+              <button className="secondary" onClick={this.handleShowData}>
+                TEKRAR DÜZENLE
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
