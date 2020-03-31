@@ -51,7 +51,7 @@ h1 {
   flex-direction: column;
   min-height: 100vh;
   background: url("/ne-kadar-verdin/bg4.png") center bottom no-repeat;
-  background-size: cover;
+  background-size: 100% 320px;
 }
 
 .App-header {
