@@ -56,6 +56,7 @@ class Calculator extends Component {
                       onChange={(event, value) =>
                         this.handleChange(year, value)
                       }
+                      onInvalidPaste={"ignore"}
                     />
                   </label>
                 </div>
