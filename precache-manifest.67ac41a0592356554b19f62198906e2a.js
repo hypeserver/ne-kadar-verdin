@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "299b4247a40788f2a555f0948a555fec",
+    "revision": "ee70c7e7db1284b82bf4cdb2ff943739",
     "url": "/ne-kadar-verdin/index.html"
   },
   {
-    "revision": "321b7542d272d6d5fe30",
-    "url": "/ne-kadar-verdin/static/css/main.94967556.chunk.css"
+    "revision": "198451da52166334b38c",
+    "url": "/ne-kadar-verdin/static/css/main.a9962e16.chunk.css"
   },
   {
     "revision": "26f60ace294c5964b817",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ne-kadar-verdin/static/js/2.728a4e78.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "321b7542d272d6d5fe30",
-    "url": "/ne-kadar-verdin/static/js/main.9742edda.chunk.js"
+    "revision": "198451da52166334b38c",
+    "url": "/ne-kadar-verdin/static/js/main.330f1e19.chunk.js"
   },
   {
     "revision": "49e1808495313e83eab5",
