@@ -86,8 +86,9 @@ export function yearly_usd(year, tax) {
 }
 
 export const calculate = wages => {
-  function calculate_yearly_tax(bracket, wage) {
+  function calculate_yearly_tax(bracket, wage, year) {
     let amount = wage;
+    let usd_tax = 0;
     let total_tax = 0;
     let tax;
     Object.keys(bracket).forEach(key => {
@@ -99,19 +100,33 @@ export const calculate = wages => {
           tax = amount * ratio;
         }
         amount -= key;
+        usd_tax += yearly_usd(year, tax);
         total_tax += tax;
       }
     });
-    return total_tax;
+    return {
+      total_tax,
+      usd_tax
+    };
   }
 
   function calculate_total_taxes(brackets, wages) {
     let total = 0;
+    let totalUSD = 0;
     Object.keys(wages).forEach(year => {
-      const yearly_tax = calculate_yearly_tax(brackets[year], wages[year]);
-      total += yearly_tax;
+      const { total_tax, usd_tax } = calculate_yearly_tax(
+        brackets[year],
+        wages[year],
+        year
+      );
+      total += total_tax;
+      totalUSD += usd_tax;
     });
-    return total;
+
+    return {
+      result: total,
+      resultUSD: totalUSD
+    };
   }
 
   return calculate_total_taxes(brackets, wages);

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactNumeric from "react-numeric";
-import { brackets, calculate, yearly_usd } from "./util";
+import { brackets, calculate } from "./util";
 import "./style.css";
 
 class Calculator extends Component {
@@ -22,16 +22,10 @@ class Calculator extends Component {
         }
       },
       () => {
-        const resultUSD = Object.entries(this.state.wages).reduce(
-          (mem, [year, tax]) => {
-            mem += yearly_usd(year, tax);
-            return mem;
-          },
-          0
-        );
+        const { result, resultUSD } = calculate(this.state.wages);
         this.setState({
-          result: calculate(this.state.wages),
-          resultUSD: Math.floor(resultUSD)
+          result,
+          resultUSD
         });
       }
     );
@@ -51,6 +45,7 @@ class Calculator extends Component {
                 <label>
                   {year}:
                   <ReactNumeric
+                    className="input-numeric"
                     value={this.state.wages[year] || ""}
                     minimumValue="0"
                     currencySymbol=" ₺"
@@ -67,6 +62,7 @@ class Calculator extends Component {
           <div>Bugüne kadar verdiğiniz vergilerin toplamı:</div>
           <span className="price">
             <ReactNumeric
+              className="priceinput"
               readOnly
               currencySymbol=" $"
               value={this.state.resultUSD}
@@ -75,6 +71,7 @@ class Calculator extends Component {
           (
           <ReactNumeric
             readOnly
+            className="priceinput"
             currencySymbol=" ₺"
             value={this.state.result}
           />
