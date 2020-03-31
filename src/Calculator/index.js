@@ -42,7 +42,7 @@ class Calculator extends Component {
       <div className="Calculator">
         <div className="data">
           <p>
-            4A Hizmet dökümünüzdeki yıllık ödemelerinizi girmeniz yeterlidir.
+            4A Hizmet dökümünüzdeki yıllık "Prime Esas Kazanc (P.E.K)" degerini girmeniz yeterlidir.
           </p>
           <div className="wages">
             {Object.keys(brackets).map(year => (
