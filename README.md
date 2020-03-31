@@ -1,10 +1,10 @@
 ## ne-kadar-verdin
 
-Bu zamana kadar verdiginiz vergileri hesaplamaniz icin ufak bir arayuz.
+Bu zamana kadar devlete doğrudan verdiğiniz vergileri hesaplayıp, bunu paylaşmanızı sağlayan ufak bir uygulama.
 
-Bu proje [Create React App](https://github.com/facebook/create-react-app) ile olusturulmustur.
+Bu proje [Create React App](https://github.com/facebook/create-react-app) ile oluşturulmuştur.
 
-Lokalinizde kurmak icin Create React App adimlarini izleyebilirsiniz.
+Lokalinizde kurmak için Create React App adımlarını takip edebilirsiniz.
 
 ```
 npm install
