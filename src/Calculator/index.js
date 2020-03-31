@@ -40,22 +40,26 @@ class Calculator extends Component {
             girmeniz yeterlidir.
           </p>
           <div className="wages">
-            {Object.keys(brackets).map(year => (
-              <div className="wage" key={year}>
-                <label>
-                  {year}:
-                  <ReactNumeric
-                    className="input-numeric"
-                    value={this.state.wages[year] || ""}
-                    minimumValue="0"
-                    currencySymbol=" ₺"
-                    decimalCharacter=","
-                    digitGroupSeparator="."
-                    onChange={(event, value) => this.handleChange(year, value)}
-                  />
-                </label>
-              </div>
-            ))}
+            {Object.keys(brackets)
+              .reverse()
+              .map(year => (
+                <div className="wage" key={year}>
+                  <label>
+                    {year}:
+                    <ReactNumeric
+                      className="input-numeric"
+                      value={this.state.wages[year] || ""}
+                      minimumValue="0"
+                      currencySymbol=" ₺"
+                      decimalCharacter=","
+                      digitGroupSeparator="."
+                      onChange={(event, value) =>
+                        this.handleChange(year, value)
+                      }
+                    />
+                  </label>
+                </div>
+              ))}
           </div>
         </div>
         <div className="result">
