@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NumberFormat from "react-number-format";
+import ReactNumeric from "react-numeric";
 import { brackets, calculate, yearly_usd } from "./util";
 import "./style.css";
 
@@ -13,12 +13,12 @@ class Calculator extends Component {
     };
   }
 
-  handleChange = (year, values) => {
+  handleChange = (year, value) => {
     this.setState(
       {
         wages: {
           ...this.state.wages,
-          [year]: values.floatValue
+          [year]: value
         }
       },
       () => {
@@ -42,18 +42,21 @@ class Calculator extends Component {
       <div className="Calculator">
         <div className="data">
           <p>
-            4A Hizmet dökümünüzdeki yıllık "Prime Esas Kazanc (P.E.K)" degerini girmeniz yeterlidir.
+            4A Hizmet dökümünüzdeki yıllık "Prime Esas Kazanc (P.E.K)" degerini
+            girmeniz yeterlidir.
           </p>
           <div className="wages">
             {Object.keys(brackets).map(year => (
               <div className="wage" key={year}>
                 <label>
                   {year}:
-                  <NumberFormat
-                    thousandSeparator={true}
-                    prefix={"₺"}
-                    onValueChange={values => this.handleChange(year, values)}
+                  <ReactNumeric
                     value={this.state.wages[year] || ""}
+                    minimumValue="0"
+                    currencySymbol=" ₺"
+                    decimalCharacter=","
+                    digitGroupSeparator="."
+                    onChange={(event, value) => this.handleChange(year, value)}
                   />
                 </label>
               </div>
@@ -63,18 +66,16 @@ class Calculator extends Component {
         <div className="result">
           <div>Bugüne kadar verdiğiniz vergilerin toplamı:</div>
           <span className="price">
-            <NumberFormat
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={"$"}
+            <ReactNumeric
+              readOnly
+              currencySymbol=" $"
               value={this.state.resultUSD}
             />
           </span>
           (
-          <NumberFormat
-            displayType={"text"}
-            thousandSeparator={true}
-            prefix={"₺"}
+          <ReactNumeric
+            readOnly
+            currencySymbol=" ₺"
             value={this.state.result}
           />
           )
