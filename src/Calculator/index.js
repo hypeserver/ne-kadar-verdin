@@ -74,7 +74,10 @@ class Calculator extends Component {
           </div>
         ) : (
           <div className="result">
-            <div>Bugüne kadar verdiğim vergilerin toplamı:</div>
+            <div>
+              Bugüne kadar devlete doğrudan <br />
+              verdiğim vergilerin toplamı:
+            </div>
             <div className="price">
               <ReactNumeric
                 className="priceinput"

@@ -54,6 +54,7 @@ input.input-numeric:focus {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: bold;
+  font-weight: 800;
   width: 100%;
   text-align: center;
 }
@@ -67,6 +68,6 @@ input.input-numeric:focus {
 }
 
 .price .priceinput {
-  font-size: 48px;
+  font-size: 60px;
   color: #c80000;
 }
