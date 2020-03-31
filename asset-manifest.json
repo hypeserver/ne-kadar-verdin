@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ne-kadar-verdin/static/css/main.df871d69.chunk.css",
+    "main.css": "/ne-kadar-verdin/static/css/main.f7aadcd4.chunk.css",
     "main.js": "/ne-kadar-verdin/static/js/main.a6cddea8.chunk.js",
     "main.js.map": "/ne-kadar-verdin/static/js/main.a6cddea8.chunk.js.map",
     "runtime-main.js": "/ne-kadar-verdin/static/js/runtime-main.32a86496.js",
@@ -8,15 +8,15 @@
     "static/js/2.c41a4c04.chunk.js": "/ne-kadar-verdin/static/js/2.c41a4c04.chunk.js",
     "static/js/2.c41a4c04.chunk.js.map": "/ne-kadar-verdin/static/js/2.c41a4c04.chunk.js.map",
     "index.html": "/ne-kadar-verdin/index.html",
-    "precache-manifest.167b045109d007607c3b9d79cb0f3907.js": "/ne-kadar-verdin/precache-manifest.167b045109d007607c3b9d79cb0f3907.js",
+    "precache-manifest.3b4811abf8b27ba9b0933c960d53d276.js": "/ne-kadar-verdin/precache-manifest.3b4811abf8b27ba9b0933c960d53d276.js",
     "service-worker.js": "/ne-kadar-verdin/service-worker.js",
-    "static/css/main.df871d69.chunk.css.map": "/ne-kadar-verdin/static/css/main.df871d69.chunk.css.map",
+    "static/css/main.f7aadcd4.chunk.css.map": "/ne-kadar-verdin/static/css/main.f7aadcd4.chunk.css.map",
     "static/js/2.c41a4c04.chunk.js.LICENSE.txt": "/ne-kadar-verdin/static/js/2.c41a4c04.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.32a86496.js",
     "static/js/2.c41a4c04.chunk.js",
-    "static/css/main.df871d69.chunk.css",
+    "static/css/main.f7aadcd4.chunk.css",
     "static/js/main.a6cddea8.chunk.js"
   ]
 }
