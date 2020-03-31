@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://hypeserver.github.io/ne-kadar-verdin",
   "dependencies": {
+    "dom-to-image": "^2.6.0",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
