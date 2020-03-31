@@ -50,7 +50,8 @@ input.input-numeric:focus {
 .priceinput {
   background: none;
   border: none;
-  margin: 20px 0px;
+  padding: 0px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: bold;
   width: 100%;
@@ -59,6 +60,10 @@ input.input-numeric:focus {
 
 .priceinput:focus {
   outline: 0;
+}
+
+.price {
+  margin-top: 30px;
 }
 
 .price .priceinput {
