@@ -65,6 +65,8 @@ class Calculator extends Component {
               className="priceinput"
               readOnly
               currencySymbol=" $"
+              decimalCharacter=","
+              digitGroupSeparator="."
               value={this.state.resultUSD}
             />
           </span>
@@ -73,6 +75,8 @@ class Calculator extends Component {
             readOnly
             className="priceinput"
             currencySymbol=" ₺"
+            decimalCharacter=","
+            digitGroupSeparator="."
             value={this.state.result}
           />
           )
