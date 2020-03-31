@@ -40,24 +40,32 @@ class Calculator extends Component {
   };
 
   handleShare = () => {
+    const remove1 = document.querySelector(".remove1");
+    const remove2 = document.querySelector(".remove2");
+    remove1.classList.add("hidden");
+    remove2.classList.add("hidden");
     const wrapper = document.body;
     const vw = Math.max(
       document.documentElement.clientWidth,
       window.innerWidth || 0
     );
-    const isDesktop = vw > 640;
-    const width = isDesktop ? 1280 : 750;
+    const isDesktop = vw > 980;
+    const width = isDesktop ? 1480 : 750;
     const scale = width / wrapper.offsetWidth;
-    const remove1 = document.querySelector(".remove1");
-    const remove2 = document.querySelector(".remove2");
-    remove1.classList.add("hidden");
-    remove2.classList.add("hidden");
+    const scaleValue = wrapper.offsetWidth - 980;
+    console.log(scaleValue / 2);
+    const transformValue = isDesktop
+      ? `scale(${scale}) translate(-${scaleValue / 2}, 0px)`
+      : `scale(${scale})`;
+    const desktopWidth = isDesktop
+      ? wrapper.offsetWidth - scaleValue
+      : wrapper.offsetWidth;
     domtoimage
       .toPng(wrapper, {
         height: wrapper.offsetHeight * scale,
-        width: wrapper.offsetWidth * scale,
+        width: desktopWidth * scale,
         style: {
-          transform: "scale(" + scale + ")",
+          transform: transformValue,
           transformOrigin: "top left",
           width: wrapper.offsetWidth + "px",
           height: wrapper.offsetHeight + "px"
